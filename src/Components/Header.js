@@ -1,6 +1,5 @@
 import React from "react";
 import ThemeToggler from "./ThemeToggler";
-import HeroSection from "./HeroSection";
 
 const Header = () => {
     return (

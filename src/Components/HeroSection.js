@@ -5,6 +5,7 @@ import AppTheme from "../Colors";
 const HeroSection = () => {
   const theme = useContext(ThemeContext)[0];
   const currentTheme = AppTheme[theme];
+  const [themeMode, setThemeMode] = useContext(ThemeContext);
 
   return (
     <div style={{
@@ -22,6 +23,9 @@ const HeroSection = () => {
           color: "white",
           border: `${currentTheme.border}`
         }}
+        onClick={() => {
+        setThemeMode(themeMode === "light" ? "dark" : "light");
+      }}
       >Toggle</button>
     </div>
   );
